@@ -1,0 +1,39 @@
+/* ===================================================================
+   VARIABLES DE DISEÑO — Tema CETIS 115 (rojo y blanco)
+   Aquí se cambian TODOS los colores y medidas del sitio.
+   Si quieres cambiar el rojo, solo cambia --rojo-cetis.
+   =================================================================== */
+
+:root {
+  /* ---- Colores institucionales CETIS 115 ---- */
+  --rojo-cetis: #B3121A;      /* rojo principal */
+  --rojo-oscuro: #7E0C12;     /* rojo para sombras / hover */
+  --rojo-claro: #E23A42;      /* rojo para acentos */
+  --rojo-suave: #FDE9EA;      /* fondo rosado muy claro */
+
+  --blanco: #FFFFFF;
+  --gris-fondo: #F5F6F8;      /* fondo general de la página */
+  --gris-borde: #E2E5EA;
+  --gris-texto: #4A4F58;
+  --negro-texto: #1C2025;
+
+  /* ---- Colores de estado ---- */
+  --verde-ok: #1E9E5A;        /* respuesta correcta */
+  --verde-suave: #E7F6EE;
+  --rojo-error: #D23B3B;      /* respuesta incorrecta */
+  --rojo-error-suave: #FBE9E9;
+  --amarillo-aviso: #E0A100;
+  --azul-info: #2563C9;
+
+  /* ---- Tipografía ---- */
+  --fuente: "Segoe UI", "Roboto", system-ui, -apple-system, sans-serif;
+  --fuente-titulo: "Segoe UI", "Roboto", system-ui, sans-serif;
+
+  /* ---- Medidas ---- */
+  --radio: 14px;          /* esquinas redondeadas */
+  --radio-chico: 8px;
+  --sombra: 0 6px 22px rgba(28, 32, 37, 0.10);
+  --sombra-suave: 0 2px 8px rgba(28, 32, 37, 0.06);
+  --max-ancho: 960px;
+  --transicion: 0.18s ease;
+}

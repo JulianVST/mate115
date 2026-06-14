@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guías y videos · CETIS 115</title>
+  <link rel="icon" href="../assets/img/logo-cetis.svg">
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/paginas.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <img class="logo" src="../assets/img/logo-cetis.svg" alt="Logo CETIS 115">
+      <div class="titulos">
+        <div class="nombre-escuela">CETIS 115</div>
+        <div class="subtitulo">Temas Selectos de Matemáticas</div>
+      </div>
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="guias.html" class="activo">📚 Guías</a>
+        <a href="maestra.html">👩‍🏫 Para la maestra</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="titulo-seccion"><span class="marca-roja"></span><br>Guías para entender cada tema</div>
+    <p class="subtexto-seccion">Mira los videos para repasar antes de hacer el quiz. Si un tema
+       todavía no tiene video, usa el botón para buscar buenos videos en YouTube.</p>
+
+    <div class="aviso aviso-info mt-1" style="margin-bottom:20px">
+      <span class="icono">💡</span>
+      <span>Consejo: ten tu libreta a la mano y resuelve los ejemplos del video junto con el profesor.</span>
+    </div>
+
+    <div id="lista-guias"><!-- se llena con guias.js --></div>
+  </main>
+
+  <footer class="pie">
+    <p><strong>CETIS 115</strong> · Página de práctica de Matemáticas</p>
+  </footer>
+
+  <script src="../assets/js/core/utils.js"></script>
+  <script src="../assets/js/core/seguridad.js"></script>
+  <script src="../assets/js/core/topics.js"></script>
+  <script src="../assets/js/paginas/guias.js"></script>
+</body>
+</html>

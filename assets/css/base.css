@@ -1,0 +1,109 @@
+/* ===================================================================
+   ESTILOS BASE — reset y estructura general
+   =================================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fuente);
+  color: var(--negro-texto);
+  background: var(--gris-fondo);
+  line-height: 1.55;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--rojo-cetis); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- Contenedor central ---- */
+.contenedor {
+  width: 100%;
+  max-width: var(--max-ancho);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* ====================== ENCABEZADO ====================== */
+.encabezado {
+  background: var(--rojo-cetis);
+  background: linear-gradient(135deg, var(--rojo-cetis), var(--rojo-oscuro));
+  color: var(--blanco);
+  box-shadow: var(--sombra-suave);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.encabezado .barra {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+}
+.encabezado .logo { width: 46px; height: 46px; flex-shrink: 0; }
+.encabezado .titulos { line-height: 1.1; }
+.encabezado .titulos .nombre-escuela {
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+.encabezado .titulos .subtitulo {
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+.encabezado nav {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.encabezado nav a {
+  color: var(--blanco);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background var(--transicion);
+}
+.encabezado nav a:hover { background: rgba(255,255,255,0.18); text-decoration: none; }
+.encabezado nav a.activo { background: var(--blanco); color: var(--rojo-cetis); }
+
+/* ====================== PIE DE PÁGINA ====================== */
+.pie {
+  text-align: center;
+  padding: 28px 18px;
+  color: var(--gris-texto);
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
+.pie strong { color: var(--rojo-cetis); }
+
+/* ====================== TÍTULOS DE SECCIÓN ====================== */
+.titulo-seccion {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--negro-texto);
+  margin: 8px 0 4px;
+}
+.titulo-seccion .marca-roja {
+  display: inline-block;
+  width: 44px; height: 5px;
+  background: var(--rojo-cetis);
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.subtexto-seccion {
+  color: var(--gris-texto);
+  margin-bottom: 22px;
+  max-width: 640px;
+}
+
+main { padding-top: 28px; padding-bottom: 20px; }
+
+/* ---- Utilidades ---- */
+.oculto { display: none !important; }
+.centrado { text-align: center; }
+.mt-1 { margin-top: 10px; } .mt-2 { margin-top: 20px; } .mt-3 { margin-top: 32px; }

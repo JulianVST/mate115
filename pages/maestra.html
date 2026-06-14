@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de la maestra · CETIS 115</title>
+  <link rel="icon" href="../assets/img/logo-cetis.svg">
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/paginas.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <img class="logo" src="../assets/img/logo-cetis.svg" alt="Logo CETIS 115">
+      <div class="titulos">
+        <div class="nombre-escuela">CETIS 115</div>
+        <div class="subtitulo">Temas Selectos de Matemáticas</div>
+      </div>
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="guias.html">📚 Guías</a>
+        <a href="maestra.html" class="activo">👩‍🏫 Para la maestra</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div class="titulo-seccion"><span class="marca-roja"></span><br>Panel de la maestra</div>
+    <p class="subtexto-seccion">Aquí puede verificar las imágenes que envían los alumnos y entrar
+       directo a cualquier quiz o guía.</p>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="tarjeta">
+      <h2 style="color:var(--rojo-cetis)">¿Cómo funciona para los alumnos?</h2>
+      <div class="mt-2">
+        <div class="paso"><div class="num">1</div><div class="txt">El alumno entra a un tema, escribe su <strong>nombre y grupo</strong> y empieza el quiz.</div></div>
+        <div class="paso"><div class="num">2</div><div class="txt">Salen preguntas <strong>al azar</strong>; resuelve en su <strong>libreta</strong> y escribe el resultado.</div></div>
+        <div class="paso"><div class="num">3</div><div class="txt">Al terminar ve su <strong>puntaje</strong>, en qué se equivocó y una retroalimentación.</div></div>
+        <div class="paso"><div class="num">4</div><div class="txt">Descarga una <strong>imagen de resultados</strong> con un <strong>código de verificación</strong> y se la envía a usted.</div></div>
+      </div>
+    </section>
+
+    <!-- VERIFICADOR -->
+    <section class="tarjeta mt-3">
+      <h2 style="color:var(--rojo-cetis)">✅ Verificar una imagen de resultados</h2>
+      <p style="color:var(--gris-texto); font-size:.92rem; margin-top:6px">
+        Copie los datos <strong>tal como aparecen</strong> en la imagen del alumno. Si el código coincide,
+        la imagen es auténtica y no fue editada.
+      </p>
+
+      <form id="form-verificar" class="mt-2">
+        <div class="grid-2">
+          <div class="campo">
+            <label for="v-nombre">Nombre del alumno</label>
+            <input type="text" id="v-nombre" placeholder="Como aparece en la imagen" required>
+          </div>
+          <div class="campo">
+            <label for="v-tema">Tema</label>
+            <select id="v-tema" required></select>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="campo">
+            <label for="v-aciertos">Aciertos</label>
+            <input type="text" id="v-aciertos" inputmode="numeric" placeholder="Ej. 8" required>
+          </div>
+          <div class="campo">
+            <label for="v-total">Total de preguntas</label>
+            <input type="text" id="v-total" inputmode="numeric" placeholder="Ej. 10" required>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="campo">
+            <label for="v-fecha">Fecha y hora (como en la imagen)</label>
+            <input type="text" id="v-fecha" placeholder="Ej. 14/06/2026 10:21" required>
+          </div>
+          <div class="campo">
+            <label for="v-codigo">Código de verificación</label>
+            <input type="text" id="v-codigo" placeholder="Ej. A1B2-C3D4" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-principal btn-grande">Verificar código</button>
+      </form>
+
+      <div id="v-resultado" class="aviso oculto mt-2"></div>
+
+      <div class="aviso aviso-amarillo mt-2">
+        <span class="icono">ℹ️</span>
+        <span>El nombre, la fecha y la hora deben escribirse <strong>idénticos</strong> a la imagen
+        (incluyendo mayúsculas y minutos). Si todo coincide y aún así marca "no coincide",
+        es señal de que la imagen fue modificada.</span>
+      </div>
+    </section>
+
+    <!-- ACCESOS DIRECTOS -->
+    <section class="tarjeta mt-3">
+      <h2 style="color:var(--rojo-cetis)">📋 Temas (acceso directo a quiz y guía)</h2>
+      <table class="tabla-temas">
+        <tbody id="tabla-temas"></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p><strong>CETIS 115</strong> · Página de práctica de Matemáticas</p>
+  </footer>
+
+  <script src="../assets/js/core/utils.js"></script>
+  <script src="../assets/js/core/seguridad.js"></script>
+  <script src="../assets/js/core/topics.js"></script>
+  <script src="../assets/js/paginas/maestra.js"></script>
+</body>
+</html>

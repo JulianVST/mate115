@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz · CETIS 115</title>
+  <link rel="icon" href="../assets/img/logo-cetis.svg">
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/quiz.css">
+  <link rel="stylesheet" href="../assets/css/paginas.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <img class="logo" src="../assets/img/logo-cetis.svg" alt="Logo CETIS 115">
+      <div class="titulos">
+        <div class="nombre-escuela">CETIS 115</div>
+        <div class="subtitulo">Temas Selectos de Matemáticas</div>
+      </div>
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="guias.html">📚 Guías</a>
+        <a href="maestra.html">👩‍🏫 Para la maestra</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <div id="contenido"><!-- el motor del quiz dibuja todo aquí --></div>
+  </main>
+
+  <footer class="pie">
+    <p><strong>CETIS 115</strong> · Página de práctica de Matemáticas</p>
+  </footer>
+
+  <!-- NÚCLEO -->
+  <script src="../assets/js/core/utils.js"></script>
+  <script src="../assets/js/core/seguridad.js"></script>
+  <script src="../assets/js/core/topics.js"></script>
+  <script src="../assets/js/core/result-image.js"></script>
+  <script src="../assets/js/core/quiz-engine.js"></script>
+
+  <!-- BANCOS DE PREGUNTAS (uno por tema) -->
+  <script src="../assets/js/data/historia-calculo-integral.js"></script>
+  <script src="../assets/js/data/area-bajo-la-curva.js"></script>
+  <script src="../assets/js/data/maximos-y-minimos.js"></script>
+  <script src="../assets/js/data/teorema-fundamental-calculo.js"></script>
+  <script src="../assets/js/data/constante-de-integracion.js"></script>
+  <script src="../assets/js/data/integracion-directa.js"></script>
+  <script src="../assets/js/data/integracion-por-sustitucion.js"></script>
+  <script src="../assets/js/data/integral-por-partes.js"></script>
+  <script src="../assets/js/data/aplicacion-calculo-integral-tfc.js"></script>
+  <script src="../assets/js/data/simplificacion-expresiones-algebraicas.js"></script>
+  <script src="../assets/js/data/signos-de-agrupacion.js"></script>
+  <script src="../assets/js/data/valor-numerico.js"></script>
+  <script src="../assets/js/data/reduccion-terminos-semejantes.js"></script>
+  <script src="../assets/js/data/productos-notables-1.js"></script>
+  <script src="../assets/js/data/productos-notables-2.js"></script>
+  <script src="../assets/js/data/factorizacion.js"></script>
+
+  <!-- ARRANQUE -->
+  <script>Quiz.iniciar();</script>
+</body>
+</html>
