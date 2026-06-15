@@ -24,12 +24,11 @@ a:hover { text-decoration: underline; }
   width: 100%;
   max-width: var(--max-ancho);
   margin: 0 auto;
-  padding: 0 18px;
+  padding: 0 16px;
 }
 
 /* ====================== ENCABEZADO ====================== */
 .encabezado {
-  background: var(--rojo-cetis);
   background: linear-gradient(135deg, var(--rojo-cetis), var(--rojo-oscuro));
   color: var(--blanco);
   box-shadow: var(--sombra-suave);
@@ -40,50 +39,74 @@ a:hover { text-decoration: underline; }
 .encabezado .barra {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 0;
+  gap: 10px;
+  padding: 10px 0;
+  flex-wrap: wrap;
 }
-.encabezado .logo { width: 46px; height: 46px; flex-shrink: 0; }
-.encabezado .titulos { line-height: 1.1; }
+.logos-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.encabezado .logo { width: 42px; height: 42px; flex-shrink: 0; }
+.encabezado .titulos { line-height: 1.15; flex: 1; min-width: 0; }
 .encabezado .titulos .nombre-escuela {
-  font-size: 1.18rem;
+  font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.4px;
+  white-space: nowrap;
 }
 .encabezado .titulos .subtitulo {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   opacity: 0.9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .encabezado nav {
   margin-left: auto;
   display: flex;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
+  align-items: center;
 }
 .encabezado nav a {
   color: var(--blanco);
-  padding: 7px 14px;
+  padding: 7px 13px;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
   transition: background var(--transicion);
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .encabezado nav a:hover { background: rgba(255,255,255,0.18); text-decoration: none; }
 .encabezado nav a.activo { background: var(--blanco); color: var(--rojo-cetis); }
+.encabezado nav a svg { flex-shrink: 0; }
 
 /* ====================== PIE DE PÁGINA ====================== */
 .pie {
   text-align: center;
-  padding: 28px 18px;
+  padding: 24px 16px;
   color: var(--gris-texto);
   font-size: 0.85rem;
   margin-top: 40px;
+  border-top: 1px solid var(--gris-borde);
 }
 .pie strong { color: var(--rojo-cetis); }
+.pie-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
 
 /* ====================== TÍTULOS DE SECCIÓN ====================== */
 .titulo-seccion {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--negro-texto);
   margin: 8px 0 4px;
@@ -101,9 +124,33 @@ a:hover { text-decoration: underline; }
   max-width: 640px;
 }
 
-main { padding-top: 28px; padding-bottom: 20px; }
+main { padding-top: 24px; padding-bottom: 20px; }
 
 /* ---- Utilidades ---- */
 .oculto { display: none !important; }
 .centrado { text-align: center; }
-.mt-1 { margin-top: 10px; } .mt-2 { margin-top: 20px; } .mt-3 { margin-top: 32px; }
+.mt-1 { margin-top: 10px; }
+.mt-2 { margin-top: 20px; }
+.mt-3 { margin-top: 32px; }
+
+/* Icono aviso inline */
+.icono-aviso { display: inline-flex; align-items: center; flex-shrink: 0; }
+
+/* ====================== RESPONSIVO ====================== */
+@media (max-width: 640px) {
+  .encabezado .barra {
+    padding: 8px 0;
+    gap: 8px;
+  }
+  .encabezado .logo { width: 36px; height: 36px; }
+  .encabezado .titulos .nombre-escuela { font-size: 0.98rem; }
+  .encabezado .titulos .subtitulo { display: none; }
+  .encabezado nav { margin-left: auto; }
+  .titulo-seccion { font-size: 1.3rem; }
+}
+
+@media (max-width: 400px) {
+  .encabezado .logo { width: 30px; height: 30px; }
+  .encabezado .titulos .nombre-escuela { font-size: 0.9rem; }
+  .encabezado nav a { padding: 6px 10px; font-size: 0.82rem; }
+}

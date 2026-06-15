@@ -14,36 +14,88 @@
 
   <header class="encabezado">
     <div class="contenedor barra">
-      <img class="logo" src="../assets/img/logo-cetis.svg" alt="Logo CETIS 115">
+      <div class="logos-header">
+        <img class="logo" src="../assets/img/logo-dgeti.svg" alt="Logo DGETI-SEP">
+        <img class="logo" src="../assets/img/logo-cetis.svg" alt="Logo CETIS 115">
+      </div>
       <div class="titulos">
         <div class="nombre-escuela">CETIS 115</div>
         <div class="subtitulo">Temas Selectos de Matemáticas</div>
       </div>
       <nav>
         <a href="../index.html">Inicio</a>
-        <a href="guias.html" class="activo">📚 Guías</a>
-        <a href="maestra.html">👩‍🏫 Para la maestra</a>
+        <a href="guias.html" class="activo">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Guías
+        </a>
       </nav>
     </div>
   </header>
 
   <main class="contenedor">
     <div class="titulo-seccion"><span class="marca-roja"></span><br>Guías para entender cada tema</div>
-    <p class="subtexto-seccion">Mira los videos para repasar antes de hacer el quiz. Si un tema
-       todavía no tiene video, usa el botón para buscar buenos videos en YouTube.</p>
+    <p class="subtexto-seccion">Mira los videos para repasar antes de hacer el quiz. Encuentra los mejores canales de matemáticas aquí.</p>
 
     <div class="aviso aviso-info mt-1" style="margin-bottom:20px">
-      <span class="icono">💡</span>
+      <span class="icono-aviso">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </span>
       <span>Consejo: ten tu libreta a la mano y resuelve los ejemplos del video junto con el profesor.</span>
     </div>
+
+    <!-- CANALES RECOMENDADOS -->
+    <section class="canales-section">
+      <div class="titulo-unidad">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--rojo-cetis)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        Canales recomendados
+        <span class="linea"></span>
+      </div>
+      <div class="grid-canales">
+        <a class="canal-card" href="https://www.youtube.com/@julioprofe" target="_blank" rel="noopener">
+          <div class="canal-ico">JP</div>
+          <div class="canal-nombre">JulioProfe</div>
+          <div class="canal-desc">Explicaciones claras paso a paso</div>
+        </a>
+        <a class="canal-card" href="https://www.youtube.com/@math2me" target="_blank" rel="noopener">
+          <div class="canal-ico">M2</div>
+          <div class="canal-nombre">Math2me</div>
+          <div class="canal-desc">Cálculo y álgebra en español</div>
+        </a>
+        <a class="canal-card" href="https://www.youtube.com/@MatematicasprofeAlex" target="_blank" rel="noopener">
+          <div class="canal-ico">PA</div>
+          <div class="canal-nombre">Profesor Alex</div>
+          <div class="canal-desc">Matemáticas para preparatoria</div>
+        </a>
+        <a class="canal-card" href="https://www.youtube.com/@unicoos" target="_blank" rel="noopener">
+          <div class="canal-ico">UN</div>
+          <div class="canal-nombre">Unicoos</div>
+          <div class="canal-desc">Cálculo integral y diferencial</div>
+        </a>
+        <a class="canal-card" href="https://www.youtube.com/@KhanAcademyEspanol" target="_blank" rel="noopener">
+          <div class="canal-ico">KA</div>
+          <div class="canal-nombre">Khan Academy</div>
+          <div class="canal-desc">Matemáticas desde lo básico</div>
+        </a>
+        <a class="canal-card" href="https://www.youtube.com/@ElTraductordeIngenieria" target="_blank" rel="noopener">
+          <div class="canal-ico">TI</div>
+          <div class="canal-nombre">Traductor de Ingeniería</div>
+          <div class="canal-desc">Explicaciones técnicas profundas</div>
+        </a>
+      </div>
+    </section>
 
     <div id="lista-guias"><!-- se llena con guias.js --></div>
   </main>
 
   <footer class="pie">
+    <div class="pie-logos">
+      <img src="../assets/img/logo-dgeti.svg" alt="DGETI" height="36">
+      <img src="../assets/img/logo-cetis.svg" alt="CETIS 115" height="36">
+    </div>
     <p><strong>CETIS 115</strong> · Página de práctica de Matemáticas</p>
   </footer>
 
+  <script src="../assets/js/core/icons.js"></script>
   <script src="../assets/js/core/utils.js"></script>
   <script src="../assets/js/core/seguridad.js"></script>
   <script src="../assets/js/core/topics.js"></script>

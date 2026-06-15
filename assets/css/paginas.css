@@ -1,5 +1,5 @@
 /* ===================================================================
-   ESTILOS DE PÁGINAS · Inicio (hero), Guías y Panel de la maestra
+   ESTILOS DE PÁGINAS · Inicio (hero) y Guías
    =================================================================== */
 
 /* ====================== HERO (inicio) ====================== */
@@ -12,19 +12,11 @@
   display: flex; align-items: center; gap: 24px;
   box-shadow: var(--sombra);
 }
-.hero .hero-texto { flex: 1; }
+.hero .hero-texto { flex: 1; min-width: 0; }
 .hero h1 { font-size: 2rem; font-weight: 800; line-height: 1.15; }
 .hero p { opacity: 0.95; margin-top: 8px; max-width: 540px; }
 .hero .hero-acciones { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
 .hero .hero-logo { width: 120px; flex-shrink: 0; }
-
-.buscador-caja { position: relative; margin: 4px 0 22px; }
-.buscador-caja input {
-  width: 100%; font-size: 1rem; padding: 14px 16px 14px 44px;
-  border: 2px solid var(--gris-borde); border-radius: 999px; background: var(--blanco);
-}
-.buscador-caja input:focus { outline: none; border-color: var(--rojo-cetis); }
-.buscador-caja .lupa { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); opacity: .5; }
 
 /* ====================== GUÍAS ====================== */
 .grid-guias { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
@@ -35,35 +27,34 @@
 }
 .guia-card.resaltado { border-color: var(--rojo-cetis); box-shadow: 0 0 0 3px var(--rojo-suave); }
 .guia-cabecera { display: flex; gap: 12px; align-items: flex-start; }
-.guia-cabecera .icono-tema { width: 44px; height: 44px; font-size: 1.4rem; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center; background: var(--rojo-suave); border-radius: 12px; }
-.video-embed { position: relative; padding-bottom: 56.25%; height: 0; border-radius: var(--radio-chico); overflow: hidden; background:#000; }
+.guia-cabecera .icono-tema {
+  width: 44px; height: 44px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--rojo-suave); border-radius: 12px;
+}
+.video-embed {
+  position: relative; padding-bottom: 56.25%; height: 0;
+  border-radius: var(--radio-chico); overflow: hidden; background: #000;
+}
 .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 .nota-video { font-size: 0.78rem; color: var(--gris-texto); }
 
-/* ====================== PANEL MAESTRA ====================== */
-.aviso-verde-fuerte { background: var(--verde-suave); color: #14653A; border: 1px solid var(--verde-ok);
-  border-radius: var(--radio-chico); padding: 14px 16px; display: flex; gap: 10px; }
-.aviso-rojo-fuerte { background: var(--rojo-error-suave); color: #8A1C1C; border: 1px solid var(--rojo-error);
-  border-radius: var(--radio-chico); padding: 14px 16px; display: flex; gap: 10px; }
-.aviso-verde-fuerte .icono, .aviso-rojo-fuerte .icono { font-size: 1.2rem; }
+/* ---- Sección de canales del tema ---- */
+.nombre-tema { font-weight: 800; font-size: 1rem; }
+.desc-tema { font-size: 0.85rem; color: var(--gris-texto); }
 
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.btn-mini { padding: 5px 12px; font-size: 0.82rem; }
+/* ====================== RESPONSIVE ====================== */
+@media (max-width: 640px) {
+  .hero { flex-direction: column-reverse; text-align: center; padding: 22px 18px; gap: 16px; }
+  .hero .hero-logo { width: 80px; }
+  .hero h1 { font-size: 1.55rem; }
+  .hero p { font-size: 0.9rem; }
+  .hero .hero-acciones { justify-content: center; }
+  .grid-guias { grid-template-columns: 1fr; gap: 12px; }
+  .guia-card { padding: 16px; }
+}
 
-table.tabla-temas { width: 100%; border-collapse: collapse; margin-top: 8px; }
-table.tabla-temas td { padding: 9px 8px; border-bottom: 1px solid var(--gris-borde); font-size: 0.92rem; }
-table.tabla-temas td:nth-child(2), table.tabla-temas td:nth-child(3) { text-align: center; width: 70px; }
-table.tabla-temas tr.fila-unidad td { background: var(--rojo-suave); color: var(--rojo-cetis); font-weight: 800; font-size: 0.82rem; text-transform: uppercase; letter-spacing: .5px; }
-
-.paso { display: flex; gap: 14px; margin-bottom: 14px; }
-.paso .num { width: 32px; height: 32px; flex-shrink: 0; background: var(--rojo-cetis); color: #fff;
-  border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; }
-.paso .txt { font-size: 0.95rem; }
-
-@media (max-width: 600px) {
-  .hero { flex-direction: column; text-align: center; padding: 26px 20px; }
-  .hero .hero-logo { width: 90px; }
-  .hero h1 { font-size: 1.5rem; }
-  .grid-2 { grid-template-columns: 1fr; }
+@media (max-width: 360px) {
+  .hero h1 { font-size: 1.35rem; }
+  .hero .hero-logo { width: 64px; }
 }
